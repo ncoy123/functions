@@ -77,6 +77,6 @@ def students_one_tailed(sample_1, sample_2):
 def side_by_side_distplt(experiment_data, control_data, font_size):
     fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
     ax1.set_title('Experiment')
-    ax2.set_title('Experiment')
+    ax2.set_title('Control')
     sns.distplot(experiment_data, ax=ax1)
     sns.distplot(control_data, ax=ax2)
