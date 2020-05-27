@@ -3,7 +3,8 @@ import psycopg2
 import pandas as pd
 import time
 
-#basic function that creates connection to database and runs query
+#basic function that creates connection to a postgres database and runs query
+#there are main different api's for connecting to different database flavors
 #input parameters to connect into this file and import into your notebook
 #useful for data analysis workflows
 def adb_conn():
