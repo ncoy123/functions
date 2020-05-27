@@ -2,6 +2,8 @@ import numpy as np
 from scipy.stats import ttest_ind
 from scipy.stats import shapiro
 from scipy.stats import normaltest
+import seaborn as sns 
+import matplotlib.pyplot as plt
 
 #check sample for normal distribution using shapiro-wilk test and D'Agostinos's K^2 test
 #note gaussian means normal distribution 
@@ -68,3 +70,13 @@ def students_one_tailed(sample_1, sample_2):
         print('fail to reject H0, sample 1 mean <= sample 2 mean')
     else:
         print('reject H0, sample 1 mean > sample 2 mean')
+
+#plot two seaborn distplots side by side
+#inputs are pandas series for experiment and control
+#font size for title font
+def side_by_side_distplt(experiment_data, control_data, font_size):
+    fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
+    ax1.set_title('Experiment')
+    ax2.set_title('Experiment')
+    sns.distplot(experiment_data, ax=ax1)
+    sns.distplot(control_data, ax=ax2)
