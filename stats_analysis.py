@@ -189,6 +189,7 @@ def wilcoxon_one_tailed(sample_1, sample_2):
     else:
 	    print('reject H0, sample 1 median > sample 2 median')
 
+###Visualizing Data###
 #plot two seaborn distplots side by side
 #inputs are pandas series for experiment and control
 #font size for title font
